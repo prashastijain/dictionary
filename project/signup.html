@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="signupstyle.css">
+</head>
+<style>/* Basic reset for margin and padding */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* Body style with pink and white gradient background */
+    body {
+        font-family: Arial, sans-serif;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #8385ef;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    
+    /* Sign up container style */
+    .signup-container {
+        background-color: white;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 100%;
+        max-width: 500px;
+       
+    }
+    
+    /* Heading style */
+    h2 {
+        margin-bottom: 30px;
+        color: rgb(146, 146, 237);
+    }
+    
+    /* Input container style with flexbox */
+    .input-container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+    
+    /* Label styling */
+    label {
+        width: 150px; /* fixed width for label */
+        font-size: 16px;
+        color: #333;
+        margin-right: 15px;
+        text-align: right;
+    }
+    
+    /* Input field styling */
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="password"] {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        outline: none;
+    }
+    
+    /* Placeholder styling */
+    input::placeholder {
+        color: #aaa;
+        font-size: 16px;
+    }
+    
+    /* Button styling */
+    button {
+        width: 100%;
+        padding: 12px;
+        background-color: rgb(146, 146, 237);
+        color: white;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    
+    /* Button hover effect */
+    button:hover {
+        color: rgb(26, 26, 91);
+    }
+    </style>
+<body>
+    <div class="signup-container">
+        <h2>Sign Up</h2>
+        <form  id="signUpForm" action="#" method="POST" onsubmit="signUp(event)" >
+            <div class="input-container">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required placeholder="Enter username">
+            </div>
+
+            <div class="input-container">
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" required placeholder="Enter full name">
+            </div>
+
+            <div class="input-container">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required placeholder="Enter phone number">
+            </div>
+
+            <div class="input-container">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Enter email">
+            </div>
+
+            <div class="input-container">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required placeholder="Enter password">
+            </div>
+
+            <div class="input-container">
+                <label for="repassword">Re-enter Password:</label>
+                <input type="password" id="repassword" name="repassword" required placeholder="Re-enter password">
+            </div>
+
+            <button type="submit"  class="signup-btn" onclick="window.location.href='login.html'">Sign Up</button>
+             <!-- <a href="login.html">
+                <button  type="button">Sign up</button>
+             </a> -->
+             
+        </form>
+        <br>
+    <button type="button" onclick="window.history.back()">Back</button>
+
+    </div>
+    <script>
+        function signUp(event) {
+            event.preventDefault();  // Prevent form submission
+
+            // Get user input values
+            const username = document.getElementById("username").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            const repassword=document.getElementById("repassword").value;
+
+            if(password !== repassword){
+                alert("Passwords not match!!");
+                return;
+            }
+            // Save username, email, and password in localStorage
+            localStorage.setItem("username", username);
+            localStorage.setItem("email", email);
+            localStorage.setItem("password", password);
+
+            // You can optionally alert the user that their account has been created
+            alert("Sign up successful! You can now log in.");
+            window.location.href="login.html";
+        }
+    </script>
+</body>
+</html>

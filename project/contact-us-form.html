@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contact-styles.css">
+</head>
+<body>
+    <div class="contact-container">
+        <div class="contact-form">
+            <h2>Contact us</h2>
+            <!-- Add an 'onsubmit' event to trigger the JavaScript function -->
+            <form onsubmit="return sendMessage(event)">
+                <div class="input-group">
+                    <input type="text" id="name" placeholder="&#xf007;  Name" class="input-field" required>
+                </div>
+                <div class="input-group">
+                    <input type="email" id="email" placeholder="&#xf0e0;  Email" class="input-field" required>
+                </div>
+                <div class="input-group">
+                    <textarea id="message" placeholder="Message" class="input-field message-field" required></textarea>
+                </div>
+                <button type="submit" class="send-btn">Send Message</button>
+            </form>
+        </div>
+        <div class="contact-illustration">
+            <!-- Placeholder for the illustration on the right -->
+            <img src="contact-us-photo.png" alt="Contact Illustration">
+        </div>
+    </div>
+    
+    <!-- Include the JavaScript file -->
+    <script src="contact-script.js"></script>
+</body>
+</html>

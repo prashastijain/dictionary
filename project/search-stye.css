@@ -1,0 +1,122 @@
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+/* Body and background styling */
+body {
+    font-family: 'Arial', sans-serif;
+    /* background: linear-gradient(to right, #ff80b5, #0099cc); Pink to Blue Gradient */
+    background-image: url(bg-image-search.png); 
+    background-repeat: no-repeat;
+    background-blend-mode: luminosity;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding-top: 100px;
+}
+
+/* Search container styling */
+.search-container {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(35px);
+}
+
+/* Heading styling */
+h1 {
+    color: #0c4160;
+    font-size: 32px;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+/* Search box styling */
+.search-box {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* Input field styling */
+input[type="text"] {
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #ff80b5;
+    border-radius: 8px;
+    width: 60%;
+    margin-right: 10px;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+/* Input field focus effect */
+input[type="text"]:focus {
+    border-color: #0099cc;
+}
+
+/* Button styling */
+button {
+    padding: 12px 25px;
+    background-color: #0099cc;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #0077b3;
+}
+
+/* Result section styling */
+
+h2 {
+    color: #0099cc;
+    font-size: 24px;
+}
+
+h3 {
+    color: #ff80b5;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+
+
+
+.card{
+    width: auto;
+    background-color: black;
+    padding: 3rem,2rem;
+    box-shadow: 0 0 0.5rem rgba(0,0,0,0.8);
+    border-radius: 1rem;
+}
+.property{
+    color: white;
+    display: flex;
+    align-items: flex-start;
+    margin:1rem 0;
+    margin-left: 60px;
+    padding: 15px;
+
+}
+.input-search{
+    color: black;
+}
